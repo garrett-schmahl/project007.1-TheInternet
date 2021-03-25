@@ -1,23 +1,20 @@
 /*global styles */
-/*margin editing done in normalize.css -gs*/
+/*see normalize.css -gs*/
 *{
   font-family: Arial, Helvetica, sans-serif;
-  /* outline-style: solid; /*TODO: add these to template*/
-  /* outline-width: 1px;
-  outline-color:red; */
 }
 hr{
   border-style:solid;
-  border-color:lightgray;
+  border-color:gray;
   border-width: 1px;
   width:auto;
-  margin:20px 5px;
+  margin:0px 5px;
 }
 /*body styles*/
 #container{
   min-height:500px;
   width:970px;
-  margin:auto;     /*TODO: add these to template*/
+  margin:auto;
 }
   #title_block{
     display:flex;
@@ -26,58 +23,92 @@ hr{
   }
     #title_block img{
       width:15%;
-      height:auto;
+      z-index: 5;
     }
     #title_block h1{
-      margin-right: 500px;
+      margin-right: 450px;
+      font-size:400%;
+      font-weight:500;
     }
-    #title_block h2{
-      background-color: blue;
-      color:white;
-      margin-top:-20px;
-    }
+      #title_block h1 span{
+        color:#23659e;
+      }
+  #container h2{
+    background-image:linear-gradient(to top,#23659e, #5e93c2, #23659e);
+    color:white;
+    margin-top:-30px;
+    padding: 15px 50% 15px 20px;
+    z-index: 3;
+    font-size:300%;
+    font-weight:500;
+  }
   #main_block{
     display:flex;
     justify-content:space-evenly;
+    background-image:linear-gradient(to top, white, white, white, white, rgb(189, 189, 189));
   }
     #left_side_main{
       flex:1;
       display:flex;
       flex-direction: column;
+      margin-top:20px;
+      margin-bottom:10px;
+      padding-left:5px;
     }
+      #left_side_main h3{
+        margin-bottom: 15px;
+      }
+        #left_side_main h3 span{
+          color:rgb(194, 0, 0);
+        }
+      #left_side_main h4{
+        margin-bottom: 20px;
+      }
+        #left_side_main h4 span{
+          color:#22659e;
+        }
       #watch_video_button{
-        background-color: turquoise;
+        background-image:linear-gradient(to top,#2668a0,#6298c3);
+        margin-bottom:8px;
       }
       #more_resources_button{
-        background-color: orange;
+        background-image:linear-gradient(to top,#e6750e,#eaac55);
+        margin-bottom:25px;
       }
       #left_side_main a{
-        padding: 20px 30px;
+        padding: 10px 20px;
         border-radius: 10px;
         filter:drop-shadow(3px 3px 2px black);
         color:white;
         text-align:center;
         text-decoration:none;
-        margin:5px;
+        font-size:120%;
       }
         #ad_block{
           background:url("../img/ad_background.png") no-repeat left top;
           display:flex;
           flex-direction:column;
           align-items: center;
+          margin-top:25px;
+          min-height: 375px;
+          filter:drop-shadow(3px 3px 2px black);
         }
           #ad_block h3{
             color:white;
+            text-align: center;
+            font-size:160%;
+            margin-top:25px;
           }
           #ad_block img{
             width:50%;
           }
           #ad_block a{
-            background-color: teal;
+            margin-top: 25px;
+            background-image:linear-gradient(to top,#00c1df, #77d0df);
           }
 
     .right_side_main{
-      flex:4;
+      flex:3;
       display:flex;
       flex-direction:column;
       margin-left:50px;
@@ -86,32 +117,53 @@ hr{
         display:flex;
         justify-content: space-between;
       }
-        #phone_badge{
-          width:80px;
-          height:80px;
-          margin: auto 10px;
-        }
         #dns_container{
           flex:20;
           display:flex;
-          align-items: center;
+          align-items: flex-end;
           margin-bottom:auto;
         }
           #dns_container img{
             width:25px;
             height:25px;
-            margin: 10px 10px;
           }
-      #phone_card{
-        display:flex;
-        flex-direction:column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-      }
+          #dns_container a{
+            text-decoration: none;
+            padding-bottom:8px;
+            padding-left:5px;
+          }
+        #phone_badge{
+          width:45px;
+          height:45px;
+          margin: auto 10px;
+          padding-bottom: 10px;
+        }
+        #phone_card{
+          display:flex;
+          flex-direction:column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          align-content: flex-start;
+          margin:0px 20px 10px 0px;
+        }
+        #phone_card p{
+          margin:3px 0px 3px 10px;
+          font-size:65%;
+        }
+        #phone_card h1{
+          margin:0px;
+          font-size:160%;
+        }
     .right_side_main h1{
       color:#2869a1;
       font-size: 130%;
+      margin-top:10px;
+    }
+    .right_side_main a{
+      text-decoration:none;
+    }
+    .right_side_main span{
+      font-weight: bold;
     }
     .right_side_main p,.right_side_main li{
       margin: 10px 0px;
@@ -123,8 +175,11 @@ hr{
     }
     #big_three_box{
       display:flex;
-      padding-top:10px;
+      margin-top: 10px;
       padding-left:20px;
+      border-style:solid;
+      border-width:5px;
+      border-color: #0085e0;
     }
       #big_three_box img{
         width:150px;
