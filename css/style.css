@@ -1,80 +1,89 @@
 /*global styles */
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-div{
+div, h1, h2{
   border-style: solid;
   border-width: 1px;
   border-color:red;
-}
-ul{
-  list-style-type:none;
-}
-li{
-  text-decoration:none;
 }
 
 /*body styles*/
 #container{
   min-height:500px;
   width:970px;
-  background-color:tan;
 }
-  #navbar{
-    height:25px;
-    background-color:rgb(219, 50, 50);
-  }
-    #navbar ul{
-      display:flex;
-      justify-content:space-around;
-    }
   #title_block{
-    background-color:teal;
     display:flex;
     align-items:center;
+    flex-wrap:wrap;
   }
-    #fake_logo{
-      height:50px;
-      width:50px;
-      background-color:blue;
+    #title_block img{
+      width:15%;
+      height:auto;
     }
     #title_block h1{
+      margin-right: 500px;
     }
-    #title_block ul{
-      display:flex;
-      flex:5;
-      justify-content:space-around;
+    #title_block h2{
+      background-color: blue;
+      color:white;
+      margin-top:-20px;
     }
+
   #main_block{
-    background-color:yellow;
     display:flex;
     justify-content:space-evenly;
   }
     #left_side_main{
-      background-color:violet;
-      height:50px;
-      width: 300px;
+      flex:1;
       display:flex;
+      flex-direction: column;
     }
-    #right_side_main{
-      background-color:wheat;
-      height:50px;
-      width: 300px;
-      display:flex;
-    }
-  #secondary_block{
-    background-color:green;
-    display:flex;
-    justify-content:space-evenly;
+      #watch_video_button{
+        background-color: turquoise;
+      }
+      #more_resources_button{
+        background-color: orange;
+      }
+      #left_side_main a{
+        padding: 20px 30px;
+        border-radius: 10px;
+        filter:drop-shadow(3px 3px 2px black);
+        color:white;
+        text-align:center;
+        text-decoration:none;
+        margin:5px;
+      }
+      #left_side_main hr{
+        border-style:solid;
+        border-color:lightgray;
+        border-width: 1px;
+        width:auto;
+        margin:30px 5px;
+      }
+        #ad_block{
+          background:url("../img/ad_background.png") no-repeat left top;
+          display:flex;
+          flex-direction:column;
+          align-items: center;
+        }
+          #ad_block h3{
+            color:white;
+          }
+          #ad_block img{
+            width:50%;
+            height:auto;
+          }
+          #ad_block a{
+            background-color: teal;
+          }
 
-  }
-    .repeated_object{
-      background-color:rgb(246, 16, 189);
-      height:50px;
-      width: 300px;
+    #right_side_main{
+      flex:4;
       display:flex;
+      flex-direction:column;
     }
-    #footer{
-      background-color:rgb(15, 154, 179);
-      display:flex;
-      justify-content:space-evenly;
-    }
+
 
