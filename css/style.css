@@ -1,18 +1,23 @@
 /*global styles */
+/*margin editing done in normalize.css -gs*/
 *{
   font-family: Arial, Helvetica, sans-serif;
+  /* outline-style: solid; /*TODO: add these to template*/
+  /* outline-width: 1px;
+  outline-color:red; */
 }
-
-div, h1, h2{
-  border-style: solid;
+hr{
+  border-style:solid;
+  border-color:lightgray;
   border-width: 1px;
-  border-color:red;
+  width:auto;
+  margin:20px 5px;
 }
-
 /*body styles*/
 #container{
   min-height:500px;
   width:970px;
+  margin:auto;     /*TODO: add these to template*/
 }
   #title_block{
     display:flex;
@@ -31,7 +36,6 @@ div, h1, h2{
       color:white;
       margin-top:-20px;
     }
-
   #main_block{
     display:flex;
     justify-content:space-evenly;
@@ -56,13 +60,6 @@ div, h1, h2{
         text-decoration:none;
         margin:5px;
       }
-      #left_side_main hr{
-        border-style:solid;
-        border-color:lightgray;
-        border-width: 1px;
-        width:auto;
-        margin:30px 5px;
-      }
         #ad_block{
           background:url("../img/ad_background.png") no-repeat left top;
           display:flex;
@@ -74,16 +71,70 @@ div, h1, h2{
           }
           #ad_block img{
             width:50%;
-            height:auto;
           }
           #ad_block a{
             background-color: teal;
           }
 
-    #right_side_main{
+    .right_side_main{
       flex:4;
       display:flex;
       flex-direction:column;
+      margin-left:50px;
     }
+      .right_side_header{
+        display:flex;
+        justify-content: space-between;
+      }
+        #phone_badge{
+          width:80px;
+          height:80px;
+          margin: auto 10px;
+        }
+        #dns_container{
+          flex:20;
+          display:flex;
+          align-items: center;
+          margin-bottom:auto;
+        }
+          #dns_container img{
+            width:25px;
+            height:25px;
+            margin: 10px 10px;
+          }
+      #phone_card{
+        display:flex;
+        flex-direction:column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+      }
+    .right_side_main h1{
+      color:#2869a1;
+      font-size: 130%;
+    }
+    .right_side_main p,.right_side_main li{
+      margin: 10px 0px;
+    }
+    .right_side_main img{
+      width:350px;
+      align-self:center;
+      margin: 10px 0px;
+    }
+    #big_three_box{
+      display:flex;
+      padding-top:10px;
+      padding-left:20px;
+    }
+      #big_three_box img{
+        width:150px;
+        margin-right:10px;
+      }
+      #big_three_box h1{
+        margin-top:10px;
+      }
 
+
+
+        
 
